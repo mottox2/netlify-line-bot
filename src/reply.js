@@ -5,7 +5,7 @@ exports.handler = async function(event, context, callback) {
   console.log(webhookBody)
 
   const data = {
-    replyToken: webhookBody[0].replyToken,
+    replyToken: webhookBody.events[0].replyToken,
     messages: [
       {
         type: 'text',
