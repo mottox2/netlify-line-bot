@@ -10,5 +10,8 @@
   },
   "scripts": {
     "build": "netlify-lambda build src/"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
   }
 }
