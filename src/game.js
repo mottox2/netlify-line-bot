@@ -8,15 +8,31 @@ exports.handler = async function(event, context, callback) {
     messages: [
       {
         type: 'text',
-        text: 'Hello Netlify Bot',
+        text: '技術書展の締切りまであと7日、だけど進捗は10%未満。あなたはどうする？',
         quickReply: {
           items: [
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: 'Hello',
-                text: '[1] Hello'
+                label: '限界まで頑張る',
+                text: '[1] 限界まで頑張る'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                label: '諦めて寝る',
+                text: '[2] 諦めて寝る'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                label: '現実逃避にイカゲーやる',
+                text: '[3] 現実逃避'
               }
             }
           ]
