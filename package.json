@@ -9,7 +9,8 @@
     "netlify-lambda": "^0.4.0"
   },
   "scripts": {
-    "build": "netlify-lambda build src/"
+    "build": "netlify-lambda build src/",
+    "serve": "netlify-lambda serve src/"
   },
   "dependencies": {
     "axios": "^0.18.0"
