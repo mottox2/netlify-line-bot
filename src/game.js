@@ -2,10 +2,18 @@ import axios from 'axios'
 
 exports.handler = async function(event, context, callback) {
   const webhookBody = JSON.parse(event.body)
-  console.log(webhookBody)
+  const event = webhookBody.events[0]
+  console.log(JSON.stringify(event, null , 4))
 
-  if (!/スタート/.test(webhookBody.events[0].message.text)) {
+  // messageイベントでなければ処理を中断
+  if (event.type !== "message") {
     callback(null, {})
+    return
+  }
+
+  if (!/スタート/.test(event.message.text)) {
+    callback(null, {})
+    return
   }
 
   const data = {
