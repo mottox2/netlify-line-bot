@@ -20,7 +20,7 @@ exports.handler = async function(event, context, callback) {
     return
   }
 
-  const messageKey = messageKey
+  const messageKey = matchResult[0]
   const data = {
     replyToken: targetEvent.replyToken,
     messages: [messageData[messageKey]]
