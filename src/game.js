@@ -9,7 +9,6 @@ exports.handler = async function(event, context, callback) {
   // messageイベントでなければ処理を中断
   if (targetEvent.type !== "message") {
     callback(null, {})
-    return
   }
 
   // 次のメッセージを決定するために、"スタート" or "1" などの文字列が入る
@@ -17,7 +16,6 @@ exports.handler = async function(event, context, callback) {
   const matchResult = targetEvent.message.text.match(/[\d+]|スタート/)
   if (!matchResult) {
     callback(null, {})
-    return
   }
 
   const messageKey = matchResult[0]
