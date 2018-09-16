@@ -62,13 +62,13 @@ export default {
         }
       ]
     },
-    "4": {
-      type: 'text',
-      text: '@mottox2まで連絡ください'
-    },
-    "5": {
-      type: 'text',
-      text: '残念…'
-    }
+  },
+  "4": {
+    type: 'text',
+    text: '@mottox2まで連絡ください'
+  },
+  "5": {
+    type: 'text',
+    text: '残念…'
   }
 }
