@@ -12,15 +12,18 @@ exports.handler = async function(event, context, callback) {
     return
   }
 
+  // 次のメッセージを決定するために、"スタート" or "1" などの文字列が入る
+  // マッチしなければ処理は中断
   const matchResult = targetEvent.message.text.match(/[\d+]|スタート/)
   if (!matchResult) {
     callback(null, {})
     return
   }
 
+  const messageKey = messageKey
   const data = {
     replyToken: targetEvent.replyToken,
-    messages: [messageData[matchResult[0]]]
+    messages: [messageData[messageKey]]
   }
 
   await axios.post('https://api.line.me/v2/bot/message/reply', data, {

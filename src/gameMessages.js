@@ -35,8 +35,40 @@ export default {
     type: 'text',
     text: '頑張り過ぎず寝るべし'
   },
+  "2": {
+    type: 'text',
+    text: '明日頑張ろう！'
+  },
   "3": {
     type: 'text',
-    text: 'スプラ友達募集中'
+    text: 'スプラ友達募集中',
+    quickReply: {
+      items: [
+        {
+          type: 'action',
+          action: {
+            type: 'message',
+            label: 'いいよ',
+            text: '[4] いいよ'
+          }
+        },
+        {
+          type: 'action',
+          action: {
+            type: 'message',
+            label: 'いやよ',
+            text: '[5] いやよ'
+          }
+        }
+      ]
+    },
+    "4": {
+      type: 'text',
+      text: '@mottox2まで連絡ください'
+    },
+    "5": {
+      type: 'text',
+      text: '残念…'
+    }
   }
 }
