@@ -26,6 +26,8 @@ exports.handler = async function(event, context, callback) {
     messages: [messageData[messageKey]]
   }
 
+  console.log(JSON.stringify(data))
+
   await axios.post('https://api.line.me/v2/bot/message/reply', data, {
     headers: {
       'Content-Type': 'application/json',
